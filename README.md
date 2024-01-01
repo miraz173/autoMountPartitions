@@ -1,4 +1,5 @@
-
+<h2>Automatically mount disk partitions to linux user on startup which(disk partitions) are assigned to Windows</h2>
+</br>
 I am using <b>Ubuntu 22.04</b> and <b>Windows 10</b> on <b>dual boot</b> mode. Only 40 GB of SSD is assigned to Ubuntu and the rest 256 GB of SSD is assigned to Windows along with 1 TB of HDD( which are logically divided in 5 partitions, 1 of which contains system files probably). 
 Now, I want full access to the partitions of HDD from Ubuntu too, i.e. I want to also mount the HDD partitions on Ubuntu. In short, I want to share HDD between both Windows and Ubuntu.
 
