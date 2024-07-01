@@ -26,7 +26,7 @@ I will create 4 directories in the  ```media/naeem/``` directory of ```root```/`
 ```bash
 #!/bin/bash
 sudo mkdir /media/naeem/Personal
-sudo mkdir /media/naeem/study
+sudo mkdir /media/naeem/Study
 sudo mkdir /media/naeem/Apps
 sudo mkdir /media/naeem/Etc
 ```
@@ -42,7 +42,7 @@ sudo mount /dev/unmounted_partition /media/username/mounting_point
 I will mount 4 partitions to their intended directories. The command used is:
 ```bash
 sudo mount /dev/sda2 /media/naeem/Personal
-sudo mount /dev/sda4 /media/naeem/study
+sudo mount /dev/sda4 /media/naeem/Study
 sudo mount /dev/sda5 /media/naeem/Apps
 sudo mount /dev/sda3 /media/naeem/Etc
 ```
@@ -67,7 +67,7 @@ in terminal and write the commands below on that bash file from terminal's nano 
 ```bash
 #!/bin/bash
 sudo mount /dev/sda2 /media/naeem/Personal
-sudo mount /dev/sda4 /media/naeem/study
+sudo mount /dev/sda4 /media/naeem/Study
 sudo mount /dev/sda5 /media/naeem/Apps
 sudo mount /dev/sda3 /media/naeem/Etc
 ```
@@ -96,3 +96,7 @@ Save and exit the terminal. Now, I should be good to go.
 The bash file <i>mount.sh</i> is executed every time Ubuntu is turned on. So, mount.sh mounts the drive partitions every time Ubuntu is booted by using `crontab`.
 ### Alternatives
 This auto execution of commands on startup can also be done by adding the bash file path to the end of `/etc/rc.local` file or by using `/etc/init.d` file. `~/.bashrc` was also suggested, but apparently, it executes every time terminal is opened, not when Ubuntu is booted.
+
+# Clarification
+
+Note that this approach does not hinder the availabilty of the partitions to the Windows OS when booted from Windows. The partitions will remain available to the user no matter whether he boots from Windows or Ubuntu OS.
