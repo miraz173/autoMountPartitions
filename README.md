@@ -91,7 +91,8 @@ Now, navigate to the bottom of the opened file and add the absolute path of `mou
 
 Save and exit the terminal. Now, I should be good to go. 
 
-# Conclusion
+---
+# How It Works
 
 The bash file <i>mount.sh</i> is executed every time Ubuntu is turned on. So, mount.sh mounts the drive partitions every time Ubuntu is booted by using `crontab`.
 ### Alternatives
@@ -100,3 +101,17 @@ This auto execution of commands on startup can also be done by adding the bash f
 # Clarification
 
 Note that this approach does not hinder the availabilty of the partitions to the Windows OS when booted from Windows. The partitions will remain available to the user no matter whether he boots from Windows or Ubuntu OS.
+
+---
+# Extra Setting
+
+Windows has folders `$RECYCLE.BIN` to store info about the items in recycle bin and `System Volume Information`, a protective folder to store Windows backups and other necessary system informations in every drive/partition that it has access. These folders are hidden in Windows by default. But when mounted on Linux, they become visible like other general folders in the drive. Since these folders should not be tempered with, and have no practical use in Linux, they should be kept hidden in File manager. To hide these system folders, create a text file named `.hidden` in that drive/partition and add the names of folders that you want to hide.
+
+```
+found.000
+$RECYCLE.BIN
+RECYCLER
+System Volume Information
+pagefile.sys
+```
+The mentioned files should now become hidden after a refresh. If it doesn't, then press `CTRL+H` to hide hidden files. The folders should be hidden now after a refresh of file manager.
