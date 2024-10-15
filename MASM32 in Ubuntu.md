@@ -13,7 +13,7 @@ Copy the script and paste it on the Ubuntu terminal. A total of 1.9 GB files wil
   wine --version
   sudo apt upgrade
   
-#masm32 installation
+#masm32 installation. Select C:// drive during installation.
   curl -o masm32v11r.zip https://masm32.com/download/masm32v11r.zip
   unzip masm32v11r.zip
   cd ~/Downloads/masm32v11r
@@ -100,6 +100,7 @@ sudo apt upgrade
    ```bash
    wine start install.exe
    ```
+   Note: During installation, please select the C: drive, as the build.sh script is configured to use the path `C:\\`. If a different drive is selected, you will need to modify the paths in the script. Specifically, update `C:\\masm32\\bin\\ml.exe` to `DriveLetter:\\masm32\\bin\\ml.exe` and `C:\\masm32\\bin\\link.exe` to `DriveLetter:\\masm32\\bin\\link.exe`, where `DriveLetter` corresponds to the drive you chose (e.g., `D:`, `E:`, or `F:`).
    The installation prompts should be followed, and all terms agreed to. After successful installation, MASM32 will be stored in the `~/.wine` directory.
 
 For more information or clarity, [this](https://phoenixnap.com/kb/how-to-install-wine-on-ubuntu) page can be consulted.
