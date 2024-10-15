@@ -142,15 +142,15 @@ For more information or clarity, [this](https://phoenixnap.com/kb/how-to-install
    fi
    ```
 
-Or
-```bash
-filename=$1
-wine "C:\\masm32\\bin\\ml.exe" /c /coff /Cp "$filename.asm"
-
-wine "C:\\masm32\\bin\\link.exe" -entry:main /subsystem:console "$filename.obj"
-
-wine "$filename.exe"
-```
+    Or
+    ```bash
+    filename=$1
+    wine "C:\\masm32\\bin\\ml.exe" /c /coff /Cp "$filename.asm"
+    
+    wine "C:\\masm32\\bin\\link.exe" -entry:main /subsystem:console "$filename.obj"
+    
+    wine "$filename.exe"
+    ```
 
 2. The file should be saved, closed, and made executable by running:
    ```bash
